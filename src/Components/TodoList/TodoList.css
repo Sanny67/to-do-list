@@ -59,15 +59,16 @@
   
   
   
-  /* [type="checkbox"]:not(:checked) + label:after {
-    
-  } */
+
   input[type="checkbox"]:checked + label:after {
     opacity: 1;
     transform: scale(1);
   }
   input[type="checkbox"]:checked + label {
     text-decoration:line-through;
+  }
+  input[type="checkbox"] + label {
+    text-decoration:none;
   }
   
   

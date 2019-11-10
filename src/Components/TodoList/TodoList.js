@@ -38,7 +38,7 @@ class TodoList extends React.Component {
 
             return {
                 id: t.id,
-                title : t.id == todo.id ? <del>{t.title}</del> : t.title,
+                title :  t.title,
                 completed: t.id == todo.id ? !t.completed : t.completed
             }
 
@@ -50,11 +50,13 @@ class TodoList extends React.Component {
 
     }
     addTask = () => {
+        console.log("Entered");
         var newTask = {
+            id: todos.length(),
             title: 'newTask',
             completed: false
         }
-        
+
         let todos = this.state.todos;
 
         todos.push(newTask);

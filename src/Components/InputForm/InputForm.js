@@ -1,5 +1,6 @@
 import React from 'react';
 import './InputForm.css';
+// import TodoList from './Components/TodoList/TodoList';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -10,7 +11,7 @@ class InputForm extends React.Component {
     render() {
         return(
         <div className="wrap">
-            <h2>To Do List</h2>
+            <h2><u>To Do List</u></h2>
             <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
                     <Col sm="9" xs="8">
