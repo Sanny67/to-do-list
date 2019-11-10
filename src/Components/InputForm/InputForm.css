@@ -1,0 +1,17 @@
+h2{
+    font-family: 'Pacifico', cursive;
+    color: #d4af37;
+    margin: 3% 0 8% 0;
+  }
+.wrap{
+    margin: 5% auto;
+    width: 60%;
+}
+.btn-outline-warning:active, .btn-outline-warning:focus, .btn-outline-warning:focus-within, .btn-outline-warning:visited, .btn-outline-warning:hover{
+    background: #d4af37;
+}
+.btn-outline-warning{
+    width: 100%;
+    color: #d4af37;
+    border-color: #d4af37;
+}

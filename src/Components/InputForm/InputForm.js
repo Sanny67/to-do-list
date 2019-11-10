@@ -9,16 +9,18 @@ import Button from 'react-bootstrap/Button';
 class InputForm extends React.Component {
     render() {
         return(
-        <div>
+        <div className="wrap">
             <h2>To Do List</h2>
             <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Col sm="10">
+                    <Col sm="9">
                         <Form.Control />
                     </Col>
-                    <ButtonToolbar>
-                        <Button variant="primary">Add Task</Button>
-                    </ButtonToolbar>
+                    <Col sm="3">
+                        <ButtonToolbar>
+                            <Button variant="outline-warning">Add Task</Button>
+                        </ButtonToolbar>
+                    </Col>
                 </Form.Group>
             </Form>
             </div>

@@ -23,7 +23,7 @@ class TodoList extends React.Component {
             },
             {
                 id: 4,
-                title: 'Hello world',
+                title: 'Hello world!',
                 completed: false
             },
         ]
