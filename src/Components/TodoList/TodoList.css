@@ -1,0 +1,127 @@
+.list{
+    text-align: left;
+    transition: 0.4s;
+  }
+  .form-check-label{
+    color: #d4af37;
+    font-size: 2em;
+    margin: 2% 1%;
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+    display: none;
+  }
+  input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 2em;
+    cursor: pointer;
+  }
+  
+  
+  
+  input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 1.50em; height: 1.50em;
+    border: 2px solid #d4af37;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+  }
+  
+  
+  
+  input[type="checkbox"] + label:after {
+    content: '\2713\0020';
+    position: absolute;
+    top: -.1em; left: .2em;
+    font-size: 1.8em;
+    line-height: 0.8;
+    color: #d4af37;
+    transition: all .2s;
+    font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  
+  
+  /* [type="checkbox"]:not(:checked) + label:after {
+    
+  } */
+  input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+  input[type="checkbox"]:checked + label {
+    text-decoration:line-through;
+  }
+  
+  
+  
+  input[type="checkbox"]:focus + label:before {
+    border: 2px dotted whitesmoke;
+  }
+  
+  
+  
+  label:hover:before {
+    border: 2px solid whitesmoke!important;
+  }
+  
+  
+  
+  
+  
+  
+  /* Useless styles, just for demo design */
+  
+  /* body {
+    font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+    color: #777;
+  }
+  h1, h2 {
+    margin-bottom: .25em;
+    font-weight: normal;
+    text-align: center;
+  }
+  h2 {
+    margin: .25em 0 2em;
+    color: #aaa;
+  }
+  form {
+    width: 7em;
+    margin: 0 auto;
+  } */
+  .txtcenter {
+    margin-top: 4em;
+    font-size: .9em;
+    text-align: center;
+    color: #aaa;
+  }
+  .copy {
+   margin-top: 2em; 
+  }
+  .copy a {
+   text-decoration: none;
+   color: #4778d9;
+  }
+  @media only screen and (max-width: 600px) {
+    .form-check-label{
+      font-size: 1.1em;
+    }
+  
+  }

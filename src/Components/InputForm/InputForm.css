@@ -1,17 +1,59 @@
 h2{
-    font-family: 'Pacifico', cursive;
+    /* font-family: 'Pacifico', cursive; */
     color: #d4af37;
-    margin: 3% 0 8% 0;
+    margin: 5% 0 8% 0;
+    font-size: 5em;
   }
 .wrap{
     margin: 5% auto;
-    width: 60%;
 }
-.btn-outline-warning:active, .btn-outline-warning:focus, .btn-outline-warning:focus-within, .btn-outline-warning:visited, .btn-outline-warning:hover{
-    background: #d4af37;
+.container{
+    width: 70%;
 }
 .btn-outline-warning{
+    height: 100%;
     width: 100%;
     color: #d4af37;
+    font-size: 2em;
     border-color: #d4af37;
+}
+.btn-outline-warning:active, .btn-outline-warning:focus, .btn-outline-warning.focus, .btn-outline-warning:visited, .btn-outline-warning:hover{
+    background: #d4af37;
+    color: black;
+}
+#formPlaintextEmail{
+    background: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    font-size: 2em;
+    height: 100%;
+    width: 100%;
+  }
+  #formPlaintextEmail:focus{
+    border: 1px solid #d4af37;
+    outline-color: transparent;
+    box-shadow: 0 0 0 0.2rem rgba(212,175,55, 0.5);
+  }
+
+@media only screen and (max-width: 600px) {
+    h2{
+        font-size: 3em;
+    }
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .wrap{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .btn-outline-warning{
+        font-size: 1.1em;
+    }
+    #formPlaintextEmail{
+        font-size: 1.1em;
+        padding: 3% 8%;
+        width: 100%;
+    }
+
 }

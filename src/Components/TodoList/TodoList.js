@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoList.css';
 import InputGroup from 'react-bootstrap/InputGroup';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
@@ -28,7 +29,7 @@ class TodoList extends React.Component {
             },
         ]
     }
-
+    
     checkboxToggle = (todo) => {
     
         let todos = this.state.todos;
@@ -37,7 +38,7 @@ class TodoList extends React.Component {
 
             return {
                 id: t.id,
-                title: t.title,
+                title : t.id == todo.id ? <del>{t.title}</del> : t.title,
                 completed: t.id == todo.id ? !t.completed : t.completed
             }
 
@@ -48,7 +49,16 @@ class TodoList extends React.Component {
         this.setState({todos: newTodos})
 
     }
+    addTask = () => {
+        var newTask = {
+            title: 'newTask',
+            completed: false
+        }
+        
+        let todos = this.state.todos;
 
+        todos.push(newTask);
+    }
     render() {
         let tasks = this.state.todos.map(todo => {
             return (
@@ -62,7 +72,7 @@ class TodoList extends React.Component {
             );
         })
         return (
-            <div>
+            <div className="list">
                 {tasks}
             </div>
 

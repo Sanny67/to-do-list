@@ -13,12 +13,12 @@ class InputForm extends React.Component {
             <h2>To Do List</h2>
             <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                    <Col sm="9">
+                    <Col sm="9" xs="8">
                         <Form.Control />
                     </Col>
-                    <Col sm="3">
+                    <Col sm="3" xs="4">
                         <ButtonToolbar>
-                            <Button variant="outline-warning">Add Task</Button>
+                            <Button variant="outline-warning" onClick="addtask()">Add Task</Button>
                         </ButtonToolbar>
                     </Col>
                 </Form.Group>
