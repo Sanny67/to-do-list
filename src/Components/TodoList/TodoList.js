@@ -5,74 +5,27 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
 
 class TodoList extends React.Component {
-    state = {
-        todos: [
-            {
-                id: 1,
-                title: 'Hello',
-                completed: true
-            },
-            {
-                id: 2,
-                title: 'Helloooo',
-                completed: false
-            },
-            {
-                id: 3,
-                title: 'Hello world',
-                completed: false
-            },
-            {
-                id: 4,
-                title: 'Hello world!',
-                completed: false
-            },
-        ]
-    }
-    
-    checkboxToggle = (todo) => {
-    
-        let todos = this.state.todos;
 
-        let newTodos = todos.map(t => {
 
-            return {
-                id: t.id,
-                title :  t.title,
-                completed: t.id == todo.id ? !t.completed : t.completed
-            }
-
-        });
-
-        console.log(newTodos);
-
-        this.setState({todos: newTodos})
-
-    }
-    addTask = () => {
-        console.log("Entered");
-        var newTask = {
-            id: todos.length(),
-            title: 'newTask',
-            completed: false
-        }
-
-        let todos = this.state.todos;
-
-        todos.push(newTask);
-    }
     render() {
-        let tasks = this.state.todos.map(todo => {
-            return (
-                <Form.Check
-                    block
-                    checked={todo.completed}
-                    label={todo.title}
-                    type="checkbox"
-                    onChange={() => this.checkboxToggle(todo)}
-                />
-            );
-        })
+        let tasks = null;
+        if (this.props.todos.length) {
+            tasks = this.props.todos.map(todo => {
+
+                return (
+                    <div onClick={() => this.props.onToggleCheck(todo)} block>
+                        <Form.Check
+                            checked={todo.completed}
+                            label={todo.title}
+                            type="checkbox"
+                        />
+                    </div>
+                );
+
+            })
+        } else {
+            return <h3>Hey, Add some task</h3>
+        }
         return (
             <div className="list">
                 {tasks}
