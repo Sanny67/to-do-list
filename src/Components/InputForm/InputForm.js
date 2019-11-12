@@ -9,8 +9,14 @@ import Button from 'react-bootstrap/Button';
 
 class InputForm extends React.Component {
 
-    state = {
+    // state = {
+    //     taskName: ''
+    // }
+    constructor(props){
+        super(props);
+        this.state = {
         taskName: ''
+    }
     }
 
     addTask = () => {
